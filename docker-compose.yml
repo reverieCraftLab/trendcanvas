@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: trendcanvas-db
+    environment:
+      POSTGRES_DB: trendcanvas
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - trendcanvas-pgdata:/var/lib/postgresql/data
+
+volumes:
+  trendcanvas-pgdata:

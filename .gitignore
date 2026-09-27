@@ -37,8 +37,6 @@ out/
 .vscode/
 ### Sensitive config ###
 application-local.yml
-application-secrets.yml
-application-local.properties
-application-secrets.properties
+application-prd.yml
 .env
 *.env
