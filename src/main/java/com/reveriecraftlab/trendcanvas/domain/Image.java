@@ -9,8 +9,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import org.hibernate.annotations.Generated;
-import org.hibernate.annotations.GenerationTime;
 
 import java.time.OffsetDateTime;
 
@@ -55,7 +53,6 @@ public class Image {
     private Short height;
 
     // KeywordGroup.createdAt과 같은 이유: DB의 DEFAULT now()를 읽기만 하고 애플리케이션이 쓰지 않는다.
-    @Generated(GenerationTime.INSERT)
     @Column(name = "created_at", insertable = false, updatable = false)
     private OffsetDateTime createdAt;
 

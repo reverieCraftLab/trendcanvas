@@ -12,8 +12,6 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OrderBy;
 import jakarta.persistence.Table;
-import org.hibernate.annotations.Generated;
-import org.hibernate.annotations.GenerationTime;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -76,11 +74,11 @@ public class KeywordGroup {
     @OrderBy("id ASC")
     private List<Image> images = new ArrayList<>();
 
-    // DB의 DEFAULT now()가 실제 값을 채운다. 애플리케이션이 값을 넣는 게 아니라
-    // "DB가 INSERT 시점에 생성한 값을 읽기만 한다"는 뜻으로 @Generated를 붙인다.
-    // 이 값을 자바 쪽에서 세팅할 방법을 안 만든 이유: created_at은 "언제 이 행이 생겼는가"라는
-    // 사실이라 애플리케이션이 임의로 바꿀 수 있으면 안 되는 값이기 때문이다.
-    @Generated(GenerationTime.INSERT)
+    // DB의 DEFAULT now()가 실제 값을 채운다. insertable/updatable을 둘 다 false로 두면
+    // Hibernate가 INSERT/UPDATE 쿼리에 이 컬럼을 아예 포함시키지 않고, SELECT할 때만
+    // DB에 있는 값을 읽어온다. 이 값을 자바 쪽에서 세팅할 생성자/세터를 안 만든 이유:
+    // created_at은 "언제 이 행이 생겼는가"라는 사실이라 애플리케이션이 임의로 바꿀 수
+    // 있으면 안 되는 값이기 때문이다.
     @Column(name = "created_at", insertable = false, updatable = false)
     private OffsetDateTime createdAt;
 
