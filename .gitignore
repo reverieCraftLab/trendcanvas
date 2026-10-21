@@ -40,3 +40,4 @@ application-local.yml
 application-prd.yml
 .env
 *.env
+.mcp.json
