@@ -1,7 +1,8 @@
-package com.reveriecraftlab.trendcanvas.dessert.web;
+package com.reveriecraftlab.trendcanvas.dessert.controller;
 
 import com.reveriecraftlab.trendcanvas.dessert.dto.DessertResponse;
 import com.reveriecraftlab.trendcanvas.dessert.service.DessertQueryService;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

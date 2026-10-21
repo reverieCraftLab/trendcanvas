@@ -1,6 +1,7 @@
 package com.reveriecraftlab.trendcanvas.dessert.repository;
 
-import com.reveriecraftlab.trendcanvas.domain.Dessert;
+import com.reveriecraftlab.trendcanvas.dessert.domain.Dessert;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

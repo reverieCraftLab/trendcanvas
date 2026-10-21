@@ -10,3 +10,12 @@ spring:
 
 server:
   port: 8080
+
+# 네이버 API. 키는 코드에 쓰지 않고 환경 변수에서만 받는다(NFR-06).
+# ':' 뒤가 비어 있는 것은 기본값이 빈 문자열이라는 뜻이다. 키가 없어도 앱은 켜지고,
+# 이미지를 호출하는 시점에 분명한 오류가 난다(DB만 확인할 때 키가 필요 없게 하려는 것).
+naver:
+  api:
+    base-url: https://naverapihub.apigw.ntruss.com
+    client-id: ${NAVER_CLIENT_ID:}
+    client-secret: ${NAVER_CLIENT_SECRET:}

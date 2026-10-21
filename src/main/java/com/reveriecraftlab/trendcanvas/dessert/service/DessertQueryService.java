@@ -2,6 +2,7 @@ package com.reveriecraftlab.trendcanvas.dessert.service;
 
 import com.reveriecraftlab.trendcanvas.dessert.dto.DessertResponse;
 import com.reveriecraftlab.trendcanvas.dessert.repository.DessertRepository;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

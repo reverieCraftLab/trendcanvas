@@ -1,4 +1,4 @@
-package com.reveriecraftlab.trendcanvas.domain;
+package com.reveriecraftlab.trendcanvas.dessert.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

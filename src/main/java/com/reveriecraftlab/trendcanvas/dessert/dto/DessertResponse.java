@@ -1,6 +1,6 @@
 package com.reveriecraftlab.trendcanvas.dessert.dto;
 
-import com.reveriecraftlab.trendcanvas.domain.Dessert;
+import com.reveriecraftlab.trendcanvas.dessert.domain.Dessert;
 
 /**
  * 홈 API가 내려주는 디저트 한 개. 화면에 필요한 값(번호와 키워드)만 담는다.
