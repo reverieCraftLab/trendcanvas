@@ -20,9 +20,9 @@ import java.util.List;
 @Service
 public class DessertQueryService {
 
-    // 홈에 한 번에 보여줄 디저트 수의 상한. 요구사항 FR-01의 "1~3개"에서 3이다.
-    // 노출 중인 디저트가 3개보다 적으면 있는 만큼만 나간다.
-    static final int HOME_LIMIT = 3;
+    // 홈에 한 번에 보여줄 디저트 수. 한 화면에 다양한 디저트가 보이도록 5개로 한다(2026-10-22 GT 결정, FR-01).
+    // 노출 중인 디저트가 5개보다 적으면 있는 만큼만 나간다.
+    static final int HOME_LIMIT = 5;
 
     private final DessertRepository dessertRepository;
 
