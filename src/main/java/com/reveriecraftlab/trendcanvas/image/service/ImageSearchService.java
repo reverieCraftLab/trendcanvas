@@ -24,11 +24,13 @@ public class ImageSearchService {
     static final int DISPLAY = 10;
 
     // 이미지가 너무 다양하게 들어와서 검색어 뒤에 붙이는 말(2026-10-22 GT 결정). 비우면("") 붙이지 않는다.
+    // " 디저트", " 디저트 카페"를 차례로 붙여 봤으나 카페 매장·인테리어 사진과 관련 없는 이미지가 섞여 비웠다(2026-10-22 GT 결정).
+    // 이제 검색어는 dessert.keyword를 그대로 쓰고, 품질은 키워드별로 DB에서 조정한다(D-08).
     // 검색어는 우리가 만드는 값이라 바꿔 보내는 것은 네이버 결과를 가공하는 것이 아니다(NFR-05과 무관).
     // 서비스 계층에서 붙이는 이유: 행동 기록(FR-08)에는 사용자가 입력한 원래 검색어를 남겨야 해서
     // 컨트롤러가 받은 값은 그대로 두고 네이버로 보내는 순간에만 바꾼다.
     // 주의: 이전 테스트(D-07)에서 "디저트"를 붙이면 뉴스·스톡 사진이 늘고 개선되지 않았다. 효과를 보며 조정한다.
-    static final String QUERY_SUFFIX = " 디저트";
+    static final String QUERY_SUFFIX = "";
 
     private final NaverImageClient naverImageClient;
 

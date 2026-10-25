@@ -20,9 +20,9 @@ import java.util.List;
 @Service
 public class DessertQueryService {
 
-    // 홈에 한 번에 보여줄 디저트 수. 한 화면에 다양한 디저트가 보이도록 5개로 한다(2026-10-22 GT 결정, FR-01).
-    // 노출 중인 디저트가 5개보다 적으면 있는 만큼만 나간다.
-    static final int HOME_LIMIT = 5;
+    // 홈에 한 번에 보여줄 디저트 수. 프런트의 ㄱ자 묶음이 디저트 한 개당 한 겹을 쓰고, 겹 수는 화면의 가로 칸 수(최대 10)다.
+    // 5개에서 10개로 늘렸다(2026-10-22 GT 결정, FR-01). 노출 중인 디저트가 이보다 적으면 있는 만큼만 나간다.
+    static final int HOME_LIMIT = 10;
 
     private final DessertRepository dessertRepository;
 
